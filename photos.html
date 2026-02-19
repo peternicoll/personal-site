@@ -1,0 +1,344 @@
+F<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>706a6e</title> <!-- Add your site title here -->
+<meta charset="UTF-8">
+
+<meta name="description" content="site description" /> <!-- Give a brief description of your site (optional) -->
+<meta name="keywords" content="site keywords" /> <!-- Write some keywords of things your site is about, optional but good for search engines! -->
+
+<meta name="author" content="706a6e" /> <!-- Don't remove this! -->
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> <!-- Replace "img" with your favicon! -->
+
+<!-- Anything written as "img" should be replaced with your own image file! -->
+<!-- Anything starting with "Zorblax ipsum" or other gibberish is placeholder text you can replace! -->
+<!-- Anything written with these two slashes in front of them is a note on what each thing is and how it's used, helpful for new coders! -->
+<!-- Feel free to change colors and everything all you want! Go nuts I don't really care -->
+
+<style type="text/css">
+body {
+    background-color: #000000;
+    background-image: url('background.png');
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F7D93D;
+    scrollbar-face-color: #000000;
+    scrollbar-highlight-color: #F7D93D;
+    scrollbar-3dlight-color: #000000;
+    scrollbar-darkshadow-color: #000000;
+    scrollbar-shadow-color: #F7D93D;
+    scrollbar-arrow-color: #F7D93D;
+    scrollbar-track-color: #000000;
+}
+
+a:link {
+    color: #FFFF00;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+.main {
+    max-width: 750px;
+    width: 95%;
+    margin: 0 auto;
+    border: 3px solid #F7D93D;
+    background-color: #000000;
+}
+
+.header {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid #F7D93D;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    width: 180px;
+    padding: 10px;
+    border-right: 3px solid #F7D93D;
+    background-color: #111111;
+}
+
+.main-content {
+    width: 570px;
+    padding: 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid #F7D93D;
+    font-size: 10px;
+}
+
+.marquee {
+    background-color: #000000;
+    color: #F7D93D;
+    padding: 5px;
+    border-top: 1px solid #F7D93D;
+    border-bottom: 1px solid #F7D93D;
+    font-weight: bold;
+}
+
+.blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to { visibility: hidden; }
+}
+
+.button {
+    border: 2px outset #F7D93D;
+    background-color: #000000;
+    color: #F7D93D;
+    padding: 2px 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover {
+    border: 2px inset #F7D93D;
+    background-color: #003300;
+}
+
+.guestbook {
+    background-color: #111111;
+    border: 1px solid #F7D93D;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.alert {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.warning {
+    color: #FFFF00;
+    font-weight: bold;
+}
+
+.news {
+    border: 1px solid #F7D93D;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.news-title {
+    background-color: #003300;
+    color: #F7D93D;
+    padding: 2px;
+    font-weight: bold;
+    border-bottom: 1px solid #F7D93D;
+}
+
+.news-date {
+    font-size: 10px;
+    color: #00CC00;
+}
+
+.news-content {
+    padding: 5px;
+}
+ul {
+  list-style-type:none
+}
+</style>
+
+<script language="JavaScript">
+
+// Time-based greeting
+<!-- I usually have the (greeting) as something thematic to the user, like "space cadet". -->
+
+function timeGreeting() {
+    var now = new Date();
+    var hour = now.getHours();
+    var greeting;
+    
+    if (hour < 12) greeting = "good morning!"; 
+    else if (hour < 18) greeting = "good afternoon!";
+    else greeting = "good evening!";
+    
+    document.getElementById("greeting").innerHTML = greeting;
+}
+
+// Random link generator
+<!-- This goes with my "i'm feeling lucky" button, and takes the user to a random page on your site out of a list of pages you give it. -->
+
+function randomLink() {
+    var links = [
+        "link.html",
+        "link.html",
+        "link.html",
+        "link.html",
+        "link.html",
+        "link.html",
+        "link.html",
+        "link.html",
+        "link.html"
+    ];
+    window.location = links[Math.floor(Math.random() * links.length)];
+}
+</script>
+
+</head>
+
+<body onload="timeGreeting();">
+<br>
+<div class="main">
+    <div class="header">
+    
+    <!-- This is a banner image! Feel free to adjust the size. -->
+        <img src="banner.png" alt="title" width="500" height="100" />
+
+    <!-- This is a scrollbar under the banner image! I usually use it for very brief updates. -->
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left" scrollamount="3">
+                <span class="blink">WELCOME to king javier's website</span>
+            </marquee>
+            
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="sidebar">
+        
+        <!-- This is an image that appears at the top of the sidebar! It's optional, but a fun touch. -->
+            <center>
+                <img src="sidebarimage.png" alt="Image" /><br />
+            </center>
+
+        <!-- This is the sidebar, where you can put pages of your site. Add as many as you'd like! You can also use images in place of text! -->
+
+            <ul>
+    <li><a href="home.html"><img src="linkhome.png" alt="image" border="0" width="88" height="31"></a></li>
+    <li><a href="photos.html"><img src="linkphotos.png" alt="image" border="0" width="88" height="31"></a></li>
+    <li><a href="music.html"><img src="linkmusic.png" alt="image" border="0" width="88" height="31"></a></li>
+    <li><a href="projects.html"><img src="linkprojects.png" alt="image" border="0" width="88" height="31"></a></li>
+    <li><a href="plants.html"><img src="linkplants.png" alt="image" border="0" width="88" height="31"></a></li>
+            </ul>
+
+         <!-- This is the random page button You can also use an image in place of text! -->
+            <ul>
+                <li><a href="javascript:randomLink()">im feeling lucky</a></li>
+            </ul>
+        
+         <!-- This is a good spot for a few 88x31 buttons, and where I put my guestbook button. -->
+            <div class="guestbook">
+                <center>
+            <a href="link"><img src="img" alt="Image" border="0" width="88" height="31"/></a><br>
+            <a href="link"><img src="img" alt="Image" border="0" width="88" height="31"/></a><br />
+            <a href="link"><img src="img" alt="Image" border="0" width="88" height="31"/></a>
+            </center>
+            </div>
+        </div>
+        
+        <div class="main-content">
+         <!-- This is where the greeting Javascript goes -->
+            <div id="greeting"></div>
+
+         <!-- A small welcome paragraph -->
+            <p>rva | hhs 26<br>
+                <br>
+                welcome to peter nicoll's personal website. glad you could make it</p>
+
+         <!-- This is a good spot for a hitcounter! You can get one for your site at count.getloli.com! -->
+            <p>you are visitor:</p>
+            <img src="https://count.getloli.com/@0cdb1f8bbc3f8490de37cd42b0a5fc02?name=0cdb1f8bbc3f8490de37cd42b0a5fc02&theme=nixietube-2&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=1" width="280" alt="Image" /><br><br>
+            
+
+         <!-- This is a good spot for graphics. I use it for buttons that move around the site. -->
+            <div class="construction">
+                <center>
+<marquee>
+<img src="button1.png"/> 
+<img src="button2.png"/> 
+<img src="button3.png"/> 
+<img src="button4.png"/> 
+<img src="button5.png"/> 
+<img src="button6.png"/> 
+<img src="button7.png"/> 
+<img src="button8.png"/> 
+<img src="button9.png"/> 
+<img src="button10.png"/> 
+<img src="button11.png"/> 
+<img src="button12.png"/> 
+<img src="button13.png"/> 
+<img src="button14.png"/> 
+<img src="button15.png"/> 
+<img src="button16.png"/> 
+</marquee>
+                </center>
+            </div><br>
+            
+            <div class="news">
+
+            <!-- This is where you'd put a title for a small blurb -->
+                <div class="news-title">latest news</div>
+
+            <!-- This is where you'd put a date for the small blurb -->
+                <div class="news-date">february 18, 2026</div>
+
+            <!-- This is where you'd put the content of your small blurb -->
+                <div class="news-content">
+                    <p>welcome to my brand new website. this is where i'll put anything i want.</p>
+                </div>
+            </div>
+
+            <!-- This is the "under construction" box, but it's cool for just about anything! -->
+            <div class="construction">
+                <center>
+                    <img src="img" alt="Image" /><br />
+                    <b>Zorblax ipsum gleepzor sit amet, nebulaflux astrozoid elit, sed do xenoquark tempor glorpindor ut labore et cosmic blarg magna aliqua.</b><br />
+                </center>
+            </div><br>
+
+            
+
+            <!-- Put whatever you want down here! This is the spot right before the footer. On my site, its used for blinkies. -->
+            <ul>
+                <img src="button17.png"/>
+                <img src="button18.png"/>
+                <img src="button19.png"/>
+                <img src="button20.png"/>
+                <img src="button21.png"/>
+                <img src="button22.png"/>
+                <img src="button23.png"/>
+                <img src="button24.png"/>
+                <img src="button25.png"/>
+                <img src="button26.png"/>
+            </ul>
+            
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a href="#top">back to top</a> | <!-- Take it from the top! -->
+        
+        <a href="instagram.com/peternicoll">my instagram</a> | <!-- This is a link you can use for anything, good for site maps -->
+
+        <!-- You can insert your email here, but it is optional! -->
+        <a href="mailto:mail@peternicoll.com">email me</a><br /><br>
+
+
+        <!-- Shows at the bottom when your site was last updated, completely optional but fun to have! -->
+        Last updated: <script language="JavaScript">document.write(document.lastModified);</script>
+    </div>
+</div>
+</body>
+</html>
